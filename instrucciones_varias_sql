@@ -1,0 +1,29 @@
+Com importar bases de dades:
+
+
+1. Entrem a MYSQL
+2. creem una base de dades
+3. fique la instrucció \. base_de_dades.sql (base_de_dades.sql fa referencia al arxiu .sql que vullgam importar.
+
+
+Com crear usuaris: 
+
+CREATE USER 'usuario1'@'localhost' identified by 'contraseña';
+
+Com entrar amb usuari que hem creat:
+
+mysql -u usuario1 -pcontraseña (es important que el apartat de la contraseña vaja així, si no no funcionarà)
+
+Com donar permisos als usuaris:
+
+(desde dins del sql pero en mode root)
+
+grant (permis que vullgues donar) on database.table to 'user'@'localhost'
+
+en el nostre cas:
+
+GRANT ALL on student.* to 'user1'@'localhost'
+
+
+
+

@@ -1,0 +1,65 @@
+INSTRUCCIONES TRANSACCIONES
+
+
+1º parte: 
+
+UPDATE bankia 
+SET diners= 10020
+WHERE nom like ‘%Javier%’
+
+Mysql > exit
+
+
+2º parte:
+
+SELECT * 
+FROM bankia
+WHERE nom like ‘%Javier%’
+
+
+SELECT * 
+FROM santander
+WHERE nom like ‘%Enrique%’
+
+
+3º parte
+
+SET TRANSACTION;
+
+UPDATE bankia 
+SET diners= 10020
+WHERE nom like ‘%Javier%’
+
+UPDATE santander 
+SET diners= 80
+WHERE nom like ‘%Enrique%’
+
+Mysql> exit;
+
+
+
+4º parte
+
+SELECT * 
+FROM bankia
+WHERE nom like ‘%Javier%’
+
+
+SELECT * 
+FROM santander
+WHERE nom like ‘%Enrique%’
+
+
+5º parte
+
+SET TRANSACTION;
+
+UPDATE bankia 
+SET diners= 10020
+WHERE nom like ‘%Javier%’
+
+UPDATE santander 
+SET diners= 80
+WHERE nom like ‘%Enrique%’
+
+commit;
